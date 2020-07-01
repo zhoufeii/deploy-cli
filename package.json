@@ -1,0 +1,30 @@
+{
+  "name": "deploy-cli",
+  "version": "1.0.0",
+  "description": "a cli to deploy ur frontend project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "deploy": "./bin/index.js"
+  },
+  "keywords": [
+    "deploy",
+    "deploy-cli",
+    "frontend",
+    "util"
+  ],
+  "author": "zhoufei",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^5.1.0",
+    "compressing": "^1.5.1",
+    "devmoji": "^2.1.9",
+    "inquirer": "^7.2.0",
+    "node-ssh": "^10.0.2",
+    "ora": "^4.0.4",
+    "shelljs": "^0.8.4"
+  }
+}
