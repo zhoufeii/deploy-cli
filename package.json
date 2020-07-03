@@ -1,5 +1,5 @@
 {
-  "name": "zf-deploy",
+  "name": "zf-deploy-cli",
   "version": "1.0.0",
   "description": "a cli to deploy ur frontend project",
   "main": "index.js",
