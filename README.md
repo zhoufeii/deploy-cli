@@ -1,5 +1,5 @@
 # zf-deploy-cli
-前端轻量化部署脚手架，支持测试、线上等多环境部署，支持环境配置扩展，配置好后仅需一条命令即可完成整个部署流程。
+前端轻量化部署脚手架，支持开发、线上等多环境部署，支持环境配置扩展，配置好后仅需一条命令即可完成整个部署流程。
 
 ## git地址：
 https://github.com/Oligocalse/deploy-cli
@@ -21,17 +21,12 @@ https://github.com/Oligocalse/deploy-cli/master/README.md
 ```
 npm i zf-deploy-cli -g
 ```
-<!-- 查看版本，表示安装成功。
-
-![安装zf-deploy-cli](./imgs/安装deploy.png) -->
 
 ## 使用
 ### 1.初始化部署模板
 ```
 deploy init
 ```
-
-<!-- ![初始化](./imgs/初始化.png) -->
 
 ### 2.配置部署环境
 部署配置文件位于deploy文件夹下的`deploy.config.js`,
@@ -72,9 +67,6 @@ module.exports = {
 ```
 deploy --help
 ```
-<!-- 查看部署命令
-
-![部署命令](./imgs/部署命令.png) -->
 
 ### 4.开发环境部署
 开发环境部署采用的时`dev`的配置
@@ -83,13 +75,9 @@ deploy dev
 ```
 先有一个确认，确认后进入部署流程，完成6步操作后，部署成功！！！
 
-<!-- ![测试环境部署](./imgs/测试环境部署.png) -->
-
 ### 5.线上环境部署
 线上环境部署采用的时`prod`的配置
 ```
 deploy prod
 ```
 部署流程和开发环境相同
-
-<!-- ![线上环境部署](./imgs/线上环境部署.png) -->

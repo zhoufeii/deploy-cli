@@ -204,7 +204,7 @@ const inquirer = require('inquirer');
 // const packageJson = require('../package.json');
 const deployPath = path.join(process.cwd(), './deploy');
 const deployConfigPath = `${deployPath}/deploy.config.js`; //``;
-const { checkNodeVersion, checkDeployConfig, tipsLog } = require('../utils/index');
+const { checkNodeVersion, checkDeployConfig, tipsLog, errorLog } = require('../utils/index');
 
 // const version = packageJson.version;
 // const requiredNodeVersion = packageJson.engines.node;
@@ -266,6 +266,24 @@ function deploy() {
             process.exit(1);
           }
           if (sure) {
+            if (name.includes('线上') || name.includes('生产') || name.includes('production') || name.includes('online') || name.includes('prod')) {
+              inquirer.prompt([
+                {
+                  type: 'confirm',
+                  message: `即将部署到${errorLog(projectName)}，请注意代码是否已经过测试！`,
+                  name: 'sure'
+                }
+              ]).then(answers => {
+                const { sure } = answers;
+                if (!sure) {
+                  process.exit(1);
+                }
+                if (sure) {
+                  const deploy = require('../lib/deploy');
+                  deploy(config);
+                }
+              })
+            }
             const deploy = require('../lib/deploy');
             deploy(config);
           }

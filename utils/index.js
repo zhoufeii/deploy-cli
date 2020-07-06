@@ -44,7 +44,7 @@ function errorLog(...content) {
 
 // 提示输出
 function tipsLog(content) {
-  return chalk.yellowBright(`${content}`);
+  return chalk.cyan(`${content}`);
 }
 
 // 检查node版本是否符合特定范围
