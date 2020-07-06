@@ -49,7 +49,7 @@ module.exports = {
     webDir: '',  // 开发环境服务器项目存放地址
   },
   prod: {  // 线上环境
-    name: '线上环境',
+    name: '线上环境', // v1.0.3版本增加线上环境部署二次确认，当 name 包含 线上|生产|production|prod|online 时出现
     script: "npm run build", // 线上环境打包脚本
     host: '', // 开发服务器地址
     port: 22, // ssh port，一般默认22
@@ -73,11 +73,10 @@ deploy --help
 ```
 deploy dev
 ```
-先有一个确认，确认后进入部署流程，完成6步操作后，部署成功！！！
+先有一个确认，确认后进入部署流程
 
 ### 5.线上环境部署
-线上环境部署采用的时`prod`的配置
+线上环境部署采用的时`prod`的配置，有二次确认
 ```
 deploy prod
 ```
-部署流程和开发环境相同
