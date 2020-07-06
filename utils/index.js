@@ -24,22 +24,22 @@ const PRIVATE_KEY_DEPLOY_SCHEMA = {
 
 // 开始部署日志
 function startLog(...content) {
-  console.log(chalk.magenta(...content));
+  return chalk.magenta(`${content}`);
 }
 
 // 信息日志
 function infoLog(...content) {
-  console.log(chalk.blue(...content));
+  return chalk.blue(`${content}`);
 }
 
 // 成功日志
 function successLog(...content) {
-  console.log(chalk.green(...content));
+  console.log(chalk.green(`${content}`));
 }
 
 // 错误日志
 function errorLog(...content) {
-  console.log(chalk.red(...content));
+  console.log(chalk.red(`${content}`));
 }
 
 // 提示输出
@@ -107,7 +107,7 @@ function checkDeployConfig(deployConfigPath) {
     }
     return configs;
   }
-  infoLog(`缺少部署相关的配置，请运行${tipsLog('deploy init')}下载部署配置`);
+  console.log(infoLog(`缺少部署相关的配置，请运行${tipsLog('deploy init')}下载部署配置`))
   return false;
 }
 

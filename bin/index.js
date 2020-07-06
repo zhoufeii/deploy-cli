@@ -214,6 +214,7 @@ const versionOptions = ['-V', '--version'];
 // checkNodeVersion(requiredNodeVersion, 'fe-deploy');
 
 const program = require('commander');
+const chalk = require('chalk');
 
 program
   // .version(version)
@@ -266,12 +267,13 @@ function deploy() {
             process.exit(1);
           }
           if (sure) {
-            if (name.includes('线上') || name.includes('生产') || name.includes('production') || name.includes('online') || name.includes('prod')) {
+            if (name.includes('线上') || name.includes('生产') || name.includes('正式') || name.includes('production') || name.includes('online') || name.includes('prod')) {
               inquirer.prompt([
                 {
                   type: 'confirm',
-                  message: `即将部署到${errorLog(projectName)}，请注意代码是否已经过测试！`,
-                  name: 'sure'
+                  message: `即将部署到${chalk.red(name)}，请确保代码已经通过测试！`,
+                  name: 'sure',
+                  default: false
                 }
               ]).then(answers => {
                 const { sure } = answers;
@@ -283,9 +285,10 @@ function deploy() {
                   deploy(config);
                 }
               })
+            } else {
+              const deploy = require('../lib/deploy');
+              deploy(config);
             }
-            const deploy = require('../lib/deploy');
-            deploy(config);
           }
         });
 

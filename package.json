@@ -1,6 +1,6 @@
 {
   "name": "zf-deploy-cli",
-  "version": "1.0.2",
+  "version": "1.0.8",
   "description": "a cli to deploy ur frontend project",
   "main": "index.js",
   "scripts": {
@@ -18,12 +18,12 @@
   "author": {
     "name": "zhoufei",
     "email": "iamyexiu@163.com",
-    "url": "https://github.com/Oligocalse/deploy-cli"
+    "url": "https://github.com/zhoufeii/deploy-cli"
   },
-  "homepage": "https://github.com/Oligocalse/deploy-cli",
+  "homepage": "https://github.com/zhoufeii/deploy-cli",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Oligocalse/deploy-cli.git"
+    "url": "https://github.com/zhoufeii/deploy-cli.git"
   },
   "license": "ISC",
   "dependencies": {
