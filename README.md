@@ -2,7 +2,7 @@
 前端轻量化部署脚手架，支持开发、线上等多环境部署，支持环境配置扩展，配置好后仅需一条命令即可完成整个部署流程。
 
 ## git地址：
-https://github.com/Oligocalse/deploy-cli
+https://github.com/zhoufeii/deploy-cli
 
 ## npm地址：
 https://www.npmjs.com/package/deploy-cli
@@ -11,7 +11,7 @@ https://www.npmjs.com/package/deploy-cli
 目前还在采用手工部署又期望快速实现轻量化部署的小团队或者个人项目。
 
 ## 使用指南
-https://github.com/Oligocalse/deploy-cli/master/README.md
+https://github.com/zhoufeii/deploy-cli/master/README.md
 
 ## 前提条件
 能通过ssh连上服务器即可
